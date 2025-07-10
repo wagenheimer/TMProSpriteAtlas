@@ -30,18 +30,19 @@ using UnityEngine.U2D;
 
 namespace TMPro
 {
-[CustomEditor(typeof(TMPSpriteAtlas))]
-public class TmpSpriteAssetImporterEditor : TMP_SpriteAssetEditor
-{
-	public override void OnInspectorGUI()
+	[CustomEditor(typeof(TMPSpriteAtlas))]
+	public class TmpSpriteAssetImporterEditor : TMP_SpriteAssetEditor
 	{
-		if(GUILayout.Button(new GUIContent("Update from SpriteAtlas")))
+		public override void OnInspectorGUI()
 		{
-			var asset = target as TMPSpriteAtlas;
-			asset.UpdateSpriteData();
-			EditorUtility.SetDirty(target);
+			if(GUILayout.Button(new GUIContent("Update from SpriteAtlas")))
+			{
+				var asset = target as TMPSpriteAtlas;
+				asset.UpdateSpriteData();
+				EditorUtility.SetDirty(target);
+				return;
+			}
+			base.OnInspectorGUI();
 		}
-		base.OnInspectorGUI();
 	}
-}
 }
