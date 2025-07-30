@@ -4,7 +4,7 @@ Support for using Sprite Atlas v2 for Text Mesh Pro in Unity
 # Install
 
 Install as a git package ([How to)](https://docs.unity3d.com/Manual/upm-ui-giturl.html))
-<br>Git URL: https://https://github.com/TBarendt/TMProSpriteAtlas.git</br>
+<br>Git URL: https://github.com/TBarendt/TMProSpriteAtlas.git</br>
 
 # How to use
 
